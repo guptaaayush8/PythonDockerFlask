@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v2
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: PythonFlask
+        image: pythonflask
         registry: ghcr.io
         tags: v1, latest
         githubOrg: guptaaayush8 # optional
