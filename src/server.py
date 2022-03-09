@@ -55,21 +55,16 @@ def db_init():
     auth_plugin='mysql_native_password'
   )
   cursor = mydb.cursor()
-
   cursor.execute("DROP TABLE IF EXISTS widgets")
   cursor.execute("CREATE TABLE widgets (name VARCHAR(255), description VARCHAR(255))")
   cursor.execute("Insert into widgets values('bablu','sweta yadav')")
   mydb.commit()
   cursor.close()
-  
-
   return 'init database'
 
 
 @app.route('/insert')
 def db_insert():
-
-
   mydb = mysql.connector.connect(
     host="mysqldb",
     user="root",
@@ -81,8 +76,6 @@ def db_insert():
   cursor.execute("Insert into widgets values('bablu','sweta yadav')")
   mydb.commit()
   cursor.close()
-  
-
   return 'insert database'
 
 if __name__ == "__main__":

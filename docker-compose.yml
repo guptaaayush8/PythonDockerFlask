@@ -2,11 +2,13 @@ version: '3.8'
 
 services:
  web:
-  image: guptaaayush8/pythonflask_web
+  image: personalinfo
   ports:
   - 8000:5000
   volumes:
   - ./:/app
+  depends_on:
+  - mysqldb
 
  mysqldb:
   container_name: mysqldb
