@@ -23,4 +23,13 @@ jobs:
         githubOrg: guptaaayush8 # optional
         username: guptaaayush8
         password: ${{ secrets.GHCR_TOKEN }}
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: pythonflaskui
+        registry: ghcr.io
+        tags: v1, latest
+        dockerfile: Dockerfilefp
+        githubOrg: guptaaayush8 # optional
+        username: guptaaayush8
+        password: ${{ secrets.GHCR_TOKEN }}
     
